@@ -1,12 +1,29 @@
 import React from 'react';
-import Hader from '../../Sheard/Header/Hader';
+import Header from '../../Sheard/Header/Header';
+import { Link, useLoaderData } from 'react-router-dom';
+import { Button, Card } from 'react-bootstrap';
+import { FaArrowLeft } from 'react-icons/fa';
+import EditorsInsight from '../EditorsInsight/EditorsInsight';
 
 const News = () => {
+    const news = useLoaderData()
+    const {title,details,_id,image_url,author,total_view,rating,category_id} = news
     return (
-        <div>
-            <Hader></Hader>
-            <h1>News Details cumming soon......</h1>
-        </div>
+        
+           <div>
+            <Card>
+      <Card.Img variant="top" src={image_url} />
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>
+            {details}
+        </Card.Text >
+     <Link  to={`/category/${category_id}`}>   <Button variant="danger"> <FaArrowLeft></FaArrowLeft>  All news in this category</Button></Link>
+      </Card.Body>
+    </Card>
+    <EditorsInsight></EditorsInsight>
+           </div>
+       
     );
 };
 

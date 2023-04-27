@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Sports from './Sports';
 
 const LeftNav = () => {
     const [categories,setCategories] = useState([])
@@ -23,6 +24,7 @@ const LeftNav = () => {
                 </p>)
             }
            </div>
+           <Sports></Sports>
         </div>
     );
 };

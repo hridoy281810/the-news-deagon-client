@@ -2,13 +2,13 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../Payges/Sheard/Leftnav/LeftNav';
 import RightNav from '../Payges/Sheard/RightNav/RightNav';
-import Hader from '../Payges/Sheard/Header/Hader';
+import Header from '../Payges/Sheard/Header/Header';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
     return (
         <div>
-            <Hader></Hader>
+            <Header></Header>
              <Container>
     
       <Row>
