@@ -4,11 +4,13 @@ import LeftNav from '../Payges/Sheard/Leftnav/LeftNav';
 import RightNav from '../Payges/Sheard/RightNav/RightNav';
 import Header from '../Payges/Sheard/Header/Header';
 import { Outlet } from 'react-router-dom';
+import NavigationBar from '../Payges/Sheard/NavigationBar/NavigationBar';
 
 const Layout = () => {
     return (
         <div>
             <Header></Header>
+            <NavigationBar></NavigationBar>
              <Container>
     
       <Row>
