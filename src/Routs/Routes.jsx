@@ -43,7 +43,7 @@ children:[
         {
             path:':id',
             element: <Category></Category>,
-            loader: ({params})=> fetch(`http://localhost:5000/categories/${params.id}`)
+            loader: ({params})=> fetch(`https://the-news-deagon-server-hridoy281810.vercel.app/categories/${params.id}`)
 
         },
       
@@ -57,7 +57,7 @@ children:[
                 path: ':id',
             
                 element: <PrivetRoute><News></News></PrivetRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/news/${params.id}`)
+                loader: ({params})=> fetch(`https://the-news-deagon-server-hridoy281810.vercel.app/news/${params.id}`)
             }
         ]
     },
