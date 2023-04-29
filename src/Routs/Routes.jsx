@@ -6,6 +6,8 @@ import News from "../Payges/News/News/News";
 import LoginLayout from "../Layout/LoginLayout";
 import Login from "../Payges/Login/Login/Login";
 import Register from "../Payges/Login/Register/Register";
+import PrivetRoute from "./PrivetRoute";
+import Trams from "../Payges/Sheard/Trams/Trams";
 
 
 
@@ -26,6 +28,10 @@ children:[
     {
         path: '/register',
         element: <Register></Register>
+    },
+    {
+        path: 'trams',
+        element: <Trams></Trams>
     }
 ]
     },
@@ -49,7 +55,8 @@ children:[
         children:[
             {
                 path: ':id',
-                element: <News></News>,
+            
+                element: <PrivetRoute><News></News></PrivetRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/news/${params.id}`)
             }
         ]
